@@ -7,6 +7,7 @@ export default class ToDoList extends Component {
 	}
 	render() {
 		return `<div class='todo-list-items'>
+					${this.props.items.length === 0 ? "<div class='todo-empty-list'>No tasks</div>" : ""}
 					${this.props.items.map(item => {
 						const todo = new todoItem({item})
 						return todo.render()
