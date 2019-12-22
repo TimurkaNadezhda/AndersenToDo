@@ -1,8 +1,10 @@
 import Component from './component.js'
 
 export default class ButtonComponent extends Component {
-	constructor(text) {
-		super("button")
-		this.element.innerText = text
+	constructor(props) {
+		super(props)
+	}
+	render() {
+		return `<button id="${this.props.id}">${this.props.text}</button>`
 	}
 }
