@@ -14,9 +14,11 @@ export default class ToDoPage extends Page {
 		const list = new ToDoList({
 			items: this.store.state.todo
 		})
-		this.anchor.innerHTML = `<div>
-									<h1>ToDoList</h1>
-									${list.render()}
+		this.anchor.innerHTML = `<div class='todo-page'>
+									<h1>To-do list</h1>
+									<div class='card'>
+										${list.render()}
+									</div>
 								</div>`
 	}
 

@@ -21,13 +21,17 @@ export default class LoginPage extends Page {
 			text: "Login",
 			id: "login-button"
 		})
-		this.anchor.innerHTML = `<form class="login-form" id="login-form">
-									<h3>Login</h3>
-									${emailInput.render()}
-									${passwordInput.render()}
-									${button.render()}
-									<p id="error"></p>
-								</form>`
+		this.anchor.innerHTML = `<div class='login-page'>
+									<form class="card" id="login-form">
+										<h3>Login</h3>
+										${emailInput.render()}
+										${passwordInput.render()}
+										<div class='panel'>
+											${button.render()}
+											<p id="error" class='error'></p>
+										</div>
+									</form>
+								</div>`
 		this.anchor.querySelector("#login-form").addEventListener("submit", async (event) => {
 			event.preventDefault()
 			try {

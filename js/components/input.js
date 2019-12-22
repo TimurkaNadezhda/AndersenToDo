@@ -5,7 +5,7 @@ export default class InputComponent extends Component {
 		super(props)
 	}
 	render() {
-		return `<div>
+		return `<div class='input'>
 					${this.props.label ? `<label for="${this.props.id}">${this.props.label}</label>` : ''}
 					<input id="${this.props.id}" type="${this.props.type || 'text'}"/>
 				</div>`

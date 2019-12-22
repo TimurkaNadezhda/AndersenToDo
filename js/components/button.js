@@ -5,6 +5,6 @@ export default class ButtonComponent extends Component {
 		super(props)
 	}
 	render() {
-		return `<button id="${this.props.id}">${this.props.text}</button>`
+		return `<button class='btn' id="${this.props.id}">${this.props.text}</button>`
 	}
 }

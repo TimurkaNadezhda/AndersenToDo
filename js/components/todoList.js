@@ -6,7 +6,7 @@ export default class ToDoList extends Component {
 		super(props)
 	}
 	render() {
-		return `<div class='todo-list'>
+		return `<div class='todo-list-items'>
 					${this.props.items.map(item => {
 						const todo = new todoItem({item})
 						return todo.render()

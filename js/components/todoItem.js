@@ -7,7 +7,7 @@ export default class ToDoItemComponent extends Component {
 		super(props)
 	}
 	render() {
-		return `<div class='todo-item'>
+		return `<div class='todo-list-item'>
 			${this.props.item.text}
 		</div>`
 	}
