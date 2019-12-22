@@ -3,14 +3,15 @@ import InputComponent from './input.js'
 import ButtonComponent from './button.js'
 
 export default class AddToDoFormComponent extends Component {
-	constructor() {
-		super('div')
-
-		const input = new InputComponent("text")
-		input.onChange(() => console.log('change'))
-		this.element.appendChild(input.element)
-
-		const button = new ButtonComponent("Add")
-		this.element.appendChild(button.element)
+	constructor(props) {
+		super(props)
+	}
+	render() {
+		const input = new InputComponent({id: 'add-todo-input'})
+		const button = new ButtonComponent({text: "add", type: "submit"})
+		return `<form class="add-todo-form" id="add-todo-form">
+					${input.render()}
+					${button.render()}
+				</form>`
 	}
 }

@@ -23,5 +23,20 @@ export default {
 		} catch(error) {
 			throw error
 		}
+	},
+	addToDo: async (state, payload) => {
+		try {
+			const response = await api.send("/todos", "POST", payload)
+			return {
+				...state,
+				todo: [
+					...state.todo,
+					response
+				]
+			}
+		} catch(error) {
+			throw error
+		}
 	}
+
 }

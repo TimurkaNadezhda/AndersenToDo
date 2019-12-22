@@ -19,7 +19,8 @@ export default class LoginPage extends Page {
 		})
 		const button = new ButtonComponent({
 			text: "Login",
-			id: "login-button"
+			id: "login-button",
+			type: "submit"
 		})
 		this.anchor.innerHTML = `<div class='login-page'>
 									<form class="card" id="login-form">
